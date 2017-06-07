@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.recordListCard {
+	padding: 5px 5px;
+  	background-color: #efefef;
+}
+.recordListCard:nth-of-type(2n){
+  	background-color: white;
+}

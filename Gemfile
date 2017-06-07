@@ -24,8 +24,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'sprockets', '~> 3.0'
 
-gem 'listen', '~> 2.7'
-
 gem 'responders', '~> 2.0'
 
 gem 'angular-rails-templates'

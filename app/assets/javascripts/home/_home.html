@@ -1,16 +1,35 @@
-<h2>{{appTitle}}</h2>
-<h4>Add an article:</h4>
-<form ng-submit="addArticle()">
-  <input type="text" placeholder="Title" ng-model="form.title" required></input><br>
-  <input type="url"  placeholder="URL" ng-model="form.url"></input><br>
-  <input type="text" placeholder = "Reading Level" ng-model="form.level"></input><br>
-  <button type="submit">Submit</button>
-</form>
-<div ng-repeat="article in articles | orderBy: 'level'">
-  <h4>{{article.title}}</h4>
-  <a href="{{article.url}}">{{article.url}}</a>
-  <div ng-hide="!article.level">Reading Level: {{article.level}}</div>
-  <a href="#/articles/{{article.id}}"><button ng-click="debug(article)">See details</button></a>
-  <button ng-click="deleteArticle(article.id)">Delete</button>
-  <br>
+<div class="container-fluid">
+  <h2>{{appTitle}}</h2>
+  <h4>Add an article:</h4>
+  <form ng-submit="addArticle()">
+  <div class="row">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <input type="text" placeholder="Title" ng-model="form.title" required></input><br>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <input type="url"  placeholder="URL" ng-model="form.url"></input><br>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <input type="text" placeholder = "Reading Level" ng-model="form.level"></input><br>
+    </div>
+     <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+    
+  
+    
+  </form>
+  <div class="row recordListCard" ng-repeat="article in articles | orderBy: 'level'">
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+       <h4>{{article.title}}</h4>
+       <a href="{{article.url}}" ng-show="show[article.id]">{{article.url}}</a>
+      <div ng-hide="!article.level" ng-show="show[article.id]">Reading Level: {{article.level}}</div>
+      <button ng-click="deleteArticle(article.id)" ng-show=show[article.id] class="btn btn-danger">Delete</button>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <button ng-click="toggle(article.id)" ng-hide="show[article.id]" class="btn btn-default">More</button>
+      <button ng-click="toggle(article.id)" ng-show="show[article.id]" class="btn btn-default">Less</button>
+    </div>
+  </div>
 </div>

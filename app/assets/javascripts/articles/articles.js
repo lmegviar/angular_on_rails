@@ -18,6 +18,7 @@ angular.module('researcher')
 		},
 
 		get: function(id) {
+			console.log('Articles.get ran! ID: ' + id);
 			return $http.get('/articles/' + id + '.json').then(function(res){
 				console.log('Articles factory get req res.data: ', res.data);
 				return res.data;
