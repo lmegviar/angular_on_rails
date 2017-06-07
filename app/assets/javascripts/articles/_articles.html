@@ -1,0 +1,16 @@
+<h2>{{article.title}}</h2>
+<h4> 
+  <a ng-show="article.url" href="{{article.url}}">
+  {{article.url}}</a> 
+</h4>
+<p>Reading Level: {{article.level}}</p>
+<p ng-hide="!article.details.length">Details:</p>
+<ul ng-repeat="detail in article.details">
+  <li>{{detail}}</li>
+</ul>
+<form ng-submit="addDetail()">
+  <input type="text" placeholder="Add a detail" ng-model="newDetail"></input>
+  <button type="submit">Submit</button>
+</form>
+
+<a href="#/home">Back</a>
