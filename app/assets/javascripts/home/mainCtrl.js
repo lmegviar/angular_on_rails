@@ -2,7 +2,7 @@ var app = angular.module('researcher');
 
 app.controller('MainCtrl', ['$scope', 'articles', function($scope, articles){
 
-	$scope.appTitle = 'Just Right Researcher';
+	$scope.appTitle = 'Research Assistant';
 	$scope.articles = articles.articles;
 	$scope.show = {};
 
@@ -33,8 +33,6 @@ app.controller('MainCtrl', ['$scope', 'articles', function($scope, articles){
 		} else {
 			$scope.show[id] = true;
 		}
-
-		console.log('Scope.show: ', $scope.show);
 	}
 
 }])

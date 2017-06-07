@@ -13,3 +13,13 @@ articles = Article.create([
 	{title: 'Fourth Article!', url: 'yahoo.com'},
 	{title: 'Fifth Article!', level: 90}
 ])
+
+details = Detail.create([
+	{article_id: 18 , body: "Here's a detail!" },
+	{article_id: 18 , body: "Another detail!" },
+	{article_id: 26 , body: "These details persist!" },
+	{article_id: 26 , body: "Forever" },
+	{article_id: 26 , body: "And ever and ever" },
+	{article_id: 26 , body: "everevereverever" }
+])
+

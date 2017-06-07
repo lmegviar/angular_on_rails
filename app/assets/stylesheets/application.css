@@ -14,6 +14,16 @@
  *= require_self
  */
 
+.titleBar {
+	background-color: #42d1f4;
+	width: 100%;
+	padding: 10px;
+}
+
+.addForm {
+	margin-bottom: 15px;
+}
+
 .recordListCard {
 	padding: 5px 5px;
   	background-color: #efefef;

@@ -10,7 +10,7 @@ angular.module('researcher', ['templates', 'ngRoute'])
         }]
       }
     })
-    .when('articles/*', {
+    .when('articles/', {
        templateUrl: 'articles/_articles.html',
        controller: 'ArticlesCtrl',
         resolve: {
@@ -28,6 +28,7 @@ angular.module('researcher', ['templates', 'ngRoute'])
 
 }]);
 
+// Switched to ngRoute due to incompatibility between angular-rails-templates and latest version of Sprockets gem
 // angular.module('researcher', ['ui.router', 'templates'])
 // .config([
 // '$stateProvider',
